@@ -1,0 +1,30 @@
+name: Build Minecraft Mod
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Скачивание кода
+        uses: actions/checkout@v4
+
+      - name: Установка Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21' # Замените на 17 для версий 1.18-1.20.4 или на 8 для 1.12.2
+
+      - name: Выдача прав и сборка
+        run: |
+          chmod +x gradlew
+          ./gradlew build
+
+      - name: Сохранение готового мода
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-mod
+          path: build/libs/*.jar

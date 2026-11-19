@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "arcanum",
+  "version": "${version}",
+  "name": "Arcanum",
+  "description": "Magic mod: regenerating mana, staffs and spells, arcane armor, magic food, ore, in-game Grimoire guide and its own Creative tab.",
+  "authors": ["You"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/arcanum/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.arcanum.Arcanum"],
+    "client": ["com.arcanum.client.ArcanumClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}

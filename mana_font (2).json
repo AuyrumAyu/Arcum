@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "arcanum:block/mana_font_top",
+    "side": "arcanum:block/mana_font_side",
+    "bottom": "arcanum:block/arcane_bricks"
+  }
+}
